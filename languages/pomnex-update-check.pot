@@ -1,0 +1,734 @@
+# Copyright (C) 2026 Pomnex
+# This file is distributed under the GPL v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pomnex Update Check 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Pomnex/pomnex-update-check/issues\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-01T14:27:36+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: pomnex-update-check\n"
+
+#. Plugin Name of the plugin
+#: pomnex-update-check.php
+#: includes/class-admin.php:164
+msgid "Pomnex Update Check"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: pomnex-update-check.php
+msgid "https://github.com/Pomnex/pomnex-update-check"
+msgstr ""
+
+#. Description of the plugin
+#: pomnex-update-check.php
+msgid "Checks your important pages after every update and emails you if something broke, so you know before your customers tell you."
+msgstr ""
+
+#. Author of the plugin
+#: pomnex-update-check.php
+msgid "Pomnex"
+msgstr ""
+
+#. Author URI of the plugin
+#: pomnex-update-check.php
+msgid "https://pomnex.com"
+msgstr ""
+
+#: includes/class-admin.php:112
+#: includes/class-admin.php:113
+#: includes/class-admin.php:273
+msgid "Update Check"
+msgstr ""
+
+#: includes/class-admin.php:145
+msgid "Settings"
+msgstr ""
+
+#: includes/class-admin.php:161
+msgid "Pomnex Update Check does not send any data off this site. To check pages after updates, it loads them from this site's own server, as a logged-out visitor and without cookies."
+msgstr ""
+
+#: includes/class-admin.php:162
+msgid "It stores in this site's database: the user ID of the person who ran each update, with the update details, in its update log (the newest 100 entries are kept), and the email addresses that receive its notifications."
+msgstr ""
+
+#: includes/class-admin.php:242
+msgid "Update Check:"
+msgstr ""
+
+#: includes/class-admin.php:243
+msgid "the check after your last update has not run yet, and it is more than 10 minutes late. WP-Cron may be slow or disabled on this site."
+msgstr ""
+
+#: includes/class-admin.php:246
+#: includes/class-admin.php:408
+msgid "Run check now"
+msgstr ""
+
+#: includes/class-admin.php:247
+msgid "Dismiss"
+msgstr ""
+
+#: includes/class-admin.php:258
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+#: includes/class-admin.php:262
+msgid "Status"
+msgstr ""
+
+#: includes/class-admin.php:263
+#: includes/class-admin.php:374
+#: includes/class-settings.php:225
+msgid "Pages"
+msgstr ""
+
+#: includes/class-admin.php:264
+msgid "Update log"
+msgstr ""
+
+#: includes/class-admin.php:265
+msgid "About"
+msgstr ""
+
+#: includes/class-admin.php:275
+msgid "Update Check sections"
+msgstr ""
+
+#: includes/class-admin.php:348
+msgid "Last check"
+msgstr ""
+
+#. translators: 1: date and time. 2: how the check started, such as "after an update".
+#: includes/class-admin.php:356
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: includes/class-admin.php:365
+msgid "No check has run yet. The first baseline is captured about a minute after activation, and a check runs after every update. You can also run one now."
+msgstr ""
+
+#. translators: %s: link to the Pages tab.
+#: includes/class-admin.php:373
+#, php-format
+msgid "No important pages are set up yet. Add them on the %s tab."
+msgstr ""
+
+#: includes/class-admin.php:382
+msgid "Schedule"
+msgstr ""
+
+#. translators: %s: date and time.
+#: includes/class-admin.php:389
+#, php-format
+msgid "Next check after an update: %s"
+msgstr ""
+
+#: includes/class-admin.php:390
+msgid "Next check after an update: none scheduled. A check is scheduled automatically when an update finishes."
+msgstr ""
+
+#. translators: %s: date and time.
+#: includes/class-admin.php:398
+#, php-format
+msgid "Next daily baseline refresh: %s"
+msgstr ""
+
+#: includes/class-admin.php:408
+msgid "Checking…"
+msgstr ""
+
+#: includes/class-admin.php:413
+msgid "Saving…"
+msgstr ""
+
+#: includes/class-admin.php:413
+msgid "Save current state as baseline"
+msgstr ""
+
+#: includes/class-admin.php:416
+msgid "Baselines refresh by themselves after every check a page passes. Use \"Save current state as baseline\" when a warning is about a change you expected, such as a redesigned page."
+msgstr ""
+
+#. translators: %s: date and time.
+#: includes/class-admin.php:456
+#, php-format
+msgid "Captured %s"
+msgstr ""
+
+#: includes/class-admin.php:457
+msgid "No baseline yet"
+msgstr ""
+
+#: includes/class-admin.php:475
+msgid "Page"
+msgstr ""
+
+#: includes/class-admin.php:476
+msgid "Result"
+msgstr ""
+
+#: includes/class-admin.php:477
+msgid "Details"
+msgstr ""
+
+#: includes/class-admin.php:479
+msgid "Baseline"
+msgstr ""
+
+#. translators: %s: marker text.
+#: includes/class-admin.php:493
+#, php-format
+msgid "Marker: %s"
+msgstr ""
+
+#: includes/class-admin.php:501
+msgid "No problems found."
+msgstr ""
+
+#: includes/class-admin.php:528
+msgid "All pages passed."
+msgstr ""
+
+#: includes/class-admin.php:531
+msgid "Something changed that may be a problem. See the details below."
+msgstr ""
+
+#: includes/class-admin.php:534
+msgid "At least one page is broken. See the details below."
+msgstr ""
+
+#: includes/class-admin.php:566
+msgid "The pages could not be loaded, so nothing was checked. This is not a pass."
+msgstr ""
+
+#: includes/class-admin.php:567
+msgid "Some pages could not be loaded, so they were not checked."
+msgstr ""
+
+#. translators: %s: link to Tools → Site Health.
+#: includes/class-admin.php:572
+#, php-format
+msgid "Some hosts block a site's requests to itself (loopback requests), which this check needs. %s runs its own loopback test and can tell you if this is the cause."
+msgstr ""
+
+#: includes/class-admin.php:573
+msgid "Tools → Site Health"
+msgstr ""
+
+#: includes/class-admin.php:589
+msgid "The check finished. The results are below."
+msgstr ""
+
+#: includes/class-admin.php:590
+msgid "The current state of every page was saved as its baseline."
+msgstr ""
+
+#: includes/class-admin.php:591
+msgid "Baselines were saved, except for pages that could not be loaded."
+msgstr ""
+
+#: includes/class-admin.php:592
+#: includes/class-check-runner.php:136
+msgid "A check is already running. Please wait a minute and try again."
+msgstr ""
+
+#: includes/class-admin.php:593
+msgid "The site is in maintenance mode. Try again when the update has finished."
+msgstr ""
+
+#: includes/class-admin.php:594
+#: includes/class-check-runner.php:142
+msgid "No important pages are set up yet. Add them on the Pages tab."
+msgstr ""
+
+#: includes/class-admin.php:620
+msgid "Every core, plugin and theme update is recorded here with the result of the check that followed. The newest 100 entries are kept. Click an entry to see the full results."
+msgstr ""
+
+#. translators: %s: date and time.
+#: includes/class-admin.php:638
+#, php-format
+msgid "Update on %s"
+msgstr ""
+
+#. translators: %s: user name or "Automatic".
+#: includes/class-admin.php:644
+#, php-format
+msgid "By: %s"
+msgstr ""
+
+#: includes/class-admin.php:650
+msgid "Check result:"
+msgstr ""
+
+#. translators: %s: date and time.
+#: includes/class-admin.php:654
+#, php-format
+msgid "checked %s"
+msgstr ""
+
+#: includes/class-admin.php:672
+msgid "The check for this update has not run yet."
+msgstr ""
+
+#: includes/class-admin.php:675
+msgid "Close"
+msgstr ""
+
+#: includes/class-admin.php:686
+msgid "About Update Check"
+msgstr ""
+
+#: includes/class-admin.php:687
+msgid "Update Check loads your important pages after every core, plugin and theme update, compares them with how they looked when they last worked, and emails you if something broke. Everything runs on your own site. No account, no external service, and no data leaves the site."
+msgstr ""
+
+#: includes/class-admin.php:688
+msgid "It does not fix problems, roll back updates or take backups. It does not take screenshots, so it does not catch small visual changes, and it does not click buttons or place test orders."
+msgstr ""
+
+#. translators: %s: link to the source code.
+#: includes/class-admin.php:693
+#, php-format
+msgid "Source code and issue tracker: %s"
+msgstr ""
+
+#. translators: %s: link to Pomnex.
+#: includes/class-admin.php:703
+#, php-format
+msgid "Developed by %s"
+msgstr ""
+
+#: includes/class-admin.php:709
+msgid "The plugin tells you something broke. Pomnex's WordPress maintenance plan fixes it for you."
+msgstr ""
+
+#: includes/class-admin.php:743
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#: includes/class-check-runner.php:132
+msgid "The site is in maintenance mode. The check will run when it ends."
+msgstr ""
+
+#: includes/class-check-runner.php:243
+msgid "Pass"
+msgstr ""
+
+#: includes/class-check-runner.php:245
+msgid "Warning"
+msgstr ""
+
+#: includes/class-check-runner.php:247
+msgid "Fail"
+msgstr ""
+
+#: includes/class-check-runner.php:249
+msgid "Could not check"
+msgstr ""
+
+#: includes/class-check-runner.php:251
+msgid "Waiting for check"
+msgstr ""
+
+#: includes/class-check-runner.php:253
+msgid "Failing now"
+msgstr ""
+
+#: includes/class-check-runner.php:255
+msgid "Not checked yet"
+msgstr ""
+
+#: includes/class-check-runner.php:268
+msgid "after an update"
+msgstr ""
+
+#: includes/class-check-runner.php:270
+msgid "daily baseline refresh"
+msgstr ""
+
+#: includes/class-check-runner.php:272
+msgid "started manually"
+msgstr ""
+
+#. translators: %s: error message from the HTTP request.
+#: includes/class-check-runner.php:288
+#, php-format
+msgid "The page could not be loaded: %s"
+msgstr ""
+
+#: includes/class-check-runner.php:291
+msgid "Not checked: the check ran out of time before it reached this page."
+msgstr ""
+
+#. translators: 1: HTTP status now. 2: HTTP status when the page last worked.
+#: includes/class-check-runner.php:296
+#, php-format
+msgid "The page returned HTTP status %1$d instead of %2$d."
+msgstr ""
+
+#. translators: %d: HTTP status code, such as 500.
+#: includes/class-check-runner.php:299
+#, php-format
+msgid "The page returned an error: HTTP status %d."
+msgstr ""
+
+#. translators: %s: host name.
+#: includes/class-check-runner.php:303
+#, php-format
+msgid "The page redirects to another site (%s). Only the redirect itself was checked."
+msgstr ""
+
+#: includes/class-check-runner.php:306
+msgid "The page shows the WordPress \"There has been a critical error on this website\" message."
+msgstr ""
+
+#. translators: %s: PHP error message shown on the page.
+#: includes/class-check-runner.php:310
+#, php-format
+msgid "A PHP error message is visible on the page: %s"
+msgstr ""
+
+#. translators: %s: the marker text.
+#: includes/class-check-runner.php:314
+#, php-format
+msgid "The marker \"%s\" is missing from the page."
+msgstr ""
+
+#. translators: %s: the marker text.
+#: includes/class-check-runner.php:318
+#, php-format
+msgid "The marker \"%s\" was not found, and it was not found when the baseline was captured either. Check that the marker is typed exactly as it appears in the page source."
+msgstr ""
+
+#. translators: %s: comma-separated shortcodes, such as [contact-form-7].
+#: includes/class-check-runner.php:328
+#, php-format
+msgid "Shortcodes are showing as plain text instead of being rendered: %s. The plugin that provides them may be inactive or broken."
+msgstr ""
+
+#. translators: 1: HTTP status code. 2: file URL.
+#: includes/class-check-runner.php:332
+#, php-format
+msgid "A stylesheet or script failed to load (HTTP %1$d): %2$s"
+msgstr ""
+
+#. translators: %s: comma-separated file URLs.
+#: includes/class-check-runner.php:336
+#, php-format
+msgid "These stylesheets or scripts were on the page when it last worked and are gone now. This can be harmless when a plugin renames its files: %s"
+msgstr ""
+
+#. translators: %d: number of files.
+#: includes/class-check-runner.php:341
+#, php-format
+msgid "%d stylesheet or script was not checked (time or request limit reached, or no response)."
+msgid_plural "%d stylesheets or scripts were not checked (time or request limit reached, or no response)."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: seconds now. 2: seconds when the page last worked.
+#: includes/class-check-runner.php:352
+#, php-format
+msgid "The page took %1$s s to load, compared with %2$s s when it last worked."
+msgstr ""
+
+#. translators: 1: size now, such as 12 KB. 2: size when the page last worked.
+#: includes/class-check-runner.php:356
+#, php-format
+msgid "The page is much smaller than when it last worked (%1$s, was %2$s). A section may be missing."
+msgstr ""
+
+#: includes/class-check-runner.php:359
+msgid "Unknown problem."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/class-check-runner.php:587
+#, php-format
+msgid "[%s] Update Check: problem found after an update"
+msgstr ""
+
+#. translators: %s: site URL.
+#: includes/class-check-runner.php:611
+#, php-format
+msgid "Update Check found a problem on %s."
+msgstr ""
+
+#. translators: %s: site URL.
+#: includes/class-check-runner.php:615
+#, php-format
+msgid "Update Check found something that may be a problem on %s."
+msgstr ""
+
+#. translators: %s: site URL.
+#: includes/class-check-runner.php:619
+#, php-format
+msgid "Update Check could not check the pages on %s."
+msgstr ""
+
+#: includes/class-check-runner.php:623
+msgid "Updates before this check:"
+msgstr ""
+
+#: includes/class-check-runner.php:626
+msgid "No updates were recorded before this check. It was started manually."
+msgstr ""
+
+#. translators: 1: item type, such as Plugin. 2: name. 3: old version. 4: new version. 5: who ran the update. 6: date and time.
+#: includes/class-check-runner.php:633
+#, php-format
+msgid "%1$s %2$s: %3$s → %4$s (%5$s, %6$s)"
+msgstr ""
+
+#: includes/class-check-runner.php:645
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: result, such as Fail.
+#: includes/class-check-runner.php:651
+#, php-format
+msgid "Result: %s"
+msgstr ""
+
+#: includes/class-check-runner.php:660
+msgid "Some hosts block a site's requests to itself (loopback requests), so the pages could not be loaded. Tools → Site Health runs its own loopback test:"
+msgstr ""
+
+#: includes/class-check-runner.php:665
+msgid "Full results are in the update log:"
+msgstr ""
+
+#: includes/class-check-runner.php:680
+#: includes/class-update-listener.php:271
+#: includes/class-update-listener.php:307
+msgid "WordPress"
+msgstr ""
+
+#: includes/class-check-runner.php:682
+msgid "Theme"
+msgstr ""
+
+#: includes/class-check-runner.php:684
+msgid "Plugin"
+msgstr ""
+
+#: includes/class-check-runner.php:696
+msgid "Automatic"
+msgstr ""
+
+#: includes/class-check-runner.php:701
+msgid "Unknown user"
+msgstr ""
+
+#: includes/class-log-list-table.php:76
+msgid "Date"
+msgstr ""
+
+#: includes/class-log-list-table.php:77
+msgid "What was updated"
+msgstr ""
+
+#: includes/class-log-list-table.php:78
+msgid "By"
+msgstr ""
+
+#: includes/class-log-list-table.php:79
+msgid "Check result"
+msgstr ""
+
+#: includes/class-log-list-table.php:102
+msgid "No updates recorded yet. Entries appear here after the next core, plugin or theme update."
+msgstr ""
+
+#: includes/class-page-checker.php:179
+msgid "The URL is not on this site."
+msgstr ""
+
+#: includes/class-page-checker.php:221
+#: includes/class-page-checker.php:231
+msgid "Too many redirects."
+msgstr ""
+
+#: includes/class-settings.php:117
+#: includes/class-settings.php:352
+msgid "Home page"
+msgstr ""
+
+#: includes/class-settings.php:218
+msgid "Important pages"
+msgstr ""
+
+#: includes/class-settings.php:234
+msgid "Notifications"
+msgstr ""
+
+#: includes/class-settings.php:241
+msgid "Notification email(s)"
+msgstr ""
+
+#: includes/class-settings.php:250
+msgid "Warnings"
+msgstr ""
+
+#: includes/class-settings.php:258
+msgid "Thresholds"
+msgstr ""
+
+#: includes/class-settings.php:285
+msgid "Choose up to 5 pages on this site that must keep working after updates. After every update, each page is loaded the way a logged-out visitor sees it and compared with how it looked when it last worked."
+msgstr ""
+
+#: includes/class-settings.php:286
+msgid "The URL must be on this site. You can enter a full URL or a path such as /checkout/."
+msgstr ""
+
+#: includes/class-settings.php:287
+msgid "The marker is optional: a piece of text or HTML that must always be on the page, such as \"Place order\" or name=\"woocommerce_checkout_place_order\". It is matched against the page's HTML source, ignoring upper and lower case, so it can be visible text or part of a tag, like an id, class or name attribute."
+msgstr ""
+
+#: includes/class-settings.php:288
+msgid "The check reads the HTML the server sends. Content that JavaScript adds after the page loads is not visible to it, so pick a marker that appears in the page source (in your browser: View Page Source)."
+msgstr ""
+
+#: includes/class-settings.php:305
+msgid "WooCommerce is active. You may want to add these pages:"
+msgstr ""
+
+#. translators: %s: page URL.
+#: includes/class-settings.php:308
+#, php-format
+msgid "Checkout: %s"
+msgstr ""
+
+#. translators: %s: page URL.
+#: includes/class-settings.php:310
+#, php-format
+msgid "Cart: %s"
+msgstr ""
+
+#: includes/class-settings.php:312
+msgid "Note: WooCommerce sends visitors with an empty cart from the checkout to the cart page, so a check of the checkout page sees the cart page. Choose a marker that appears there, or check the cart page directly."
+msgstr ""
+
+#: includes/class-settings.php:326
+msgid "Label"
+msgstr ""
+
+#: includes/class-settings.php:327
+msgid "URL"
+msgstr ""
+
+#: includes/class-settings.php:328
+msgid "Marker (optional)"
+msgstr ""
+
+#. translators: %d: row number.
+#: includes/class-settings.php:341
+#, php-format
+msgid "Page %d"
+msgstr ""
+
+#. translators: %s: row name, such as "Page 1".
+#: includes/class-settings.php:349
+#, php-format
+msgid "%s label"
+msgstr ""
+
+#: includes/class-settings.php:352
+msgid "Checkout"
+msgstr ""
+
+#. translators: %s: row name, such as "Page 1".
+#: includes/class-settings.php:358
+#, php-format
+msgid "%s URL"
+msgstr ""
+
+#. translators: %s: row name, such as "Page 1".
+#: includes/class-settings.php:367
+#, php-format
+msgid "%s marker"
+msgstr ""
+
+#: includes/class-settings.php:378
+msgid "To remove a page, clear its label and URL. Saving captures a fresh baseline for new or changed pages."
+msgstr ""
+
+#: includes/class-settings.php:389
+msgid "Separate several addresses with commas. Emails are sent when a check fails."
+msgstr ""
+
+#: includes/class-settings.php:401
+msgid "Also email on warnings"
+msgstr ""
+
+#: includes/class-settings.php:403
+msgid "Warnings are changes that may be harmless, such as a slower page or a stylesheet that was renamed."
+msgstr ""
+
+#. translators: 1: factor, such as 2. 2: seconds, such as 1.0.
+#: includes/class-settings.php:419
+#, php-format
+msgid "Slow response: warn when a page takes more than %1$s× as long as when it last worked, and is at least %2$s s slower. Both must be true, so a fast page getting slightly slower is not reported."
+msgstr ""
+
+#. translators: %s: percentage, such as 50.
+#: includes/class-settings.php:431
+#, php-format
+msgid "Size drop: warn when the page's HTML is less than %s %% of its size when it last worked. A page that suddenly shrinks has often lost a section."
+msgstr ""
+
+#: includes/class-settings.php:487
+msgid "a label is required."
+msgstr ""
+
+#. translators: 1: row number. 2: reason the row was rejected.
+#: includes/class-settings.php:496
+#, php-format
+msgid "Page %1$d was not saved: %2$s"
+msgstr ""
+
+#: includes/class-settings.php:571
+msgid "Settings saved. A baseline was captured for new or changed pages."
+msgstr ""
+
+#. translators: %s: comma-separated page labels.
+#: includes/class-settings.php:579
+#, php-format
+msgid "These pages are failing now: %s. Their baseline was saved anyway. See the Status tab for details."
+msgstr ""
+
+#. translators: %s: comma-separated page labels.
+#: includes/class-settings.php:592
+#, php-format
+msgid "These pages could not be loaded, so no baseline was captured: %s. Some hosts block a site's requests to itself; Tools → Site Health runs its own test for this."
+msgstr ""
+
+#: includes/class-settings.php:615
+msgid "a URL is required."
+msgstr ""
+
+#: includes/class-settings.php:630
+msgid "the URL is not valid."
+msgstr ""
+
+#. translators: 1: host the owner entered. 2: this site's host.
+#: includes/class-settings.php:637
+#, php-format
+msgid "the URL is on %1$s, but only pages on this site (%2$s) can be checked."
+msgstr ""
+
+#. translators: %s: comma-separated invalid addresses.
+#: includes/class-settings.php:689
+#, php-format
+msgid "These email addresses are not valid and were removed: %s"
+msgstr ""
