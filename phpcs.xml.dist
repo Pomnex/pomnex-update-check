@@ -39,6 +39,11 @@
 		</properties>
 	</rule>
 
+	<!-- The main file keeps the exact plugin header; @package is in the license block below it. -->
+	<rule ref="Squiz.Commenting.FileComment.MissingPackageTag">
+		<exclude-pattern>/pomnex-update-check\.php$</exclude-pattern>
+	</rule>
+
 	<!-- PHPUnit test classes follow PHPUnit naming, not WordPress file naming. -->
 	<rule ref="WordPress.Files.FileName">
 		<exclude-pattern>/tests/*</exclude-pattern>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Checkout &#8211; Example Shop</title>
+<link rel='stylesheet' id='theme-style-css' href='https://example.com/wp-content/themes/shop/style.css?ver=1.4.2' media='all' />
+<link rel="stylesheet" href="/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=9.1.0&amp;x=1">
+<link rel="preload" as="style" href="https://example.com/wp-content/plugins/fonts/preload.css">
+<link rel="stylesheet" href="https://fonts.example.net/css?family=Inter">
+<script src="https://example.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script>var shop = { "url": "[cart]" };</script>
+</head>
+<body class="page checkout">
+<header><a href="/">Example Shop</a></header>
+<main>
+<h1>Checkout</h1>
+<form name="checkout" class="checkout woocommerce-checkout">
+<p>Pay safely with your card.</p>
+<p>Use the coupon [field shown in brackets] if you have one.</p>
+<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order">Place&nbsp;order</button>
+</form>
+<pre>Example usage: [contact-form id="1"]</pre>
+</main>
+<script src="//example.com/wp-content/plugins/woocommerce/assets/js/checkout.js?ver=9.1.0"></script>
+<script src="https://cdn.example.org/analytics.js"></script>
+</body>
+</html>
