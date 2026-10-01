@@ -371,6 +371,7 @@ final class Check_Runner {
 		$started      = microtime( true );
 		$baselines    = self::get_baselines();
 		$asset_budget = self::MAX_ASSETS_PER_RUN;
+		$asset_cache  = array();
 		$page_runs    = array();
 		$responses    = array();
 
@@ -398,6 +399,12 @@ final class Check_Runner {
 
 			if ( empty( $response['error'] ) ) {
 				foreach ( $this->analyzer()->extract_assets( $response['body'], $response['url'] ) as $normalized => $absolute ) {
+					// Pages share most assets; a file already requested in this run is not requested again.
+					if ( isset( $asset_cache[ $absolute ] ) ) {
+						$assets[ $normalized ] = $asset_cache[ $absolute ];
+						continue;
+					}
+
 					$out_of_budget = $checked >= self::MAX_ASSETS_PER_PAGE || $asset_budget <= 0 || microtime( true ) - $started >= self::TIME_BUDGET;
 
 					if ( $out_of_budget ) {
@@ -405,7 +412,8 @@ final class Check_Runner {
 						continue;
 					}
 
-					$assets[ $normalized ] = $this->checker->check_asset( $absolute );
+					$assets[ $normalized ]    = $this->checker->check_asset( $absolute );
+					$asset_cache[ $absolute ] = $assets[ $normalized ];
 					++$checked;
 					--$asset_budget;
 				}
@@ -414,7 +422,7 @@ final class Check_Runner {
 			$findings = $this->analyzer()->analyze( $response, $baseline, $page['marker'], self::shortcode_tags(), empty( $response['error'] ) ? $assets : null );
 			$result   = Page_Analyzer::page_result( $findings );
 
-			$page_runs[]              = self::page_record( $page, $result, $findings, $response, count( $assets ), $checked );
+			$page_runs[]              = self::page_record( $page, $result, $findings, $response, count( $assets ), count( array_filter( $assets, array( __CLASS__, 'was_checked' ) ) ) );
 			$responses[ $page['id'] ] = array(
 				'response' => $response,
 				'assets'   => array_keys( $assets ),
@@ -741,6 +749,16 @@ final class Check_Runner {
 			'assets_checked' => (int) $assets_checked,
 			'findings'       => $findings,
 		);
+	}
+
+	/**
+	 * Whether an asset result came from a request (not skipped by the budget).
+	 *
+	 * @param array $result Asset result.
+	 * @return bool
+	 */
+	private static function was_checked( array $result ) {
+		return empty( $result['skipped'] );
 	}
 
 	/**
