@@ -1,0 +1,34 @@
+{
+	"name": "pomnex/pomnex-update-check",
+	"description": "Checks your important pages after every update and emails you if something broke.",
+	"type": "wordpress-plugin",
+	"license": "GPL-3.0-or-later",
+	"homepage": "https://github.com/Pomnex/pomnex-update-check",
+	"authors": [
+		{
+			"name": "Pomnex",
+			"homepage": "https://pomnex.com"
+		}
+	],
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"phpunit/phpunit": "^9.6",
+		"wp-coding-standards/wpcs": "^3.1"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"sort-packages": true
+	},
+	"scripts": {
+		"lint": "phpcs",
+		"lint:fix": "phpcbf",
+		"test": "phpunit",
+		"build": "bash bin/build-zip.sh"
+	}
+}

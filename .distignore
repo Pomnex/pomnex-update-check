@@ -1,0 +1,20 @@
+# Development files excluded from the release zip.
+/.git
+/.github
+/.gitignore
+/.distignore
+/.editorconfig
+/.phpunit.result.cache
+/.phpcs-cache
+/bin
+/build
+/node_modules
+/tests
+/vendor
+/composer.json
+/composer.lock
+/phpcs.xml.dist
+/phpunit.xml.dist
+/BUILD-PROMPT.md
+/pomnex-update-check.zip
+/.gitattributes

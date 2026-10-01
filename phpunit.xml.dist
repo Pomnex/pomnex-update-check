@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<phpunit
+	bootstrap="tests/bootstrap.php"
+	colors="true"
+	beStrictAboutTestsThatDoNotTestAnything="true"
+	failOnWarning="true"
+	failOnRisky="true"
+>
+	<testsuites>
+		<testsuite name="Page_Analyzer">
+			<directory suffix="Test.php">tests</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

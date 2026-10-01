@@ -1,0 +1,6 @@
+/vendor/
+/node_modules/
+/build/
+/pomnex-update-check.zip
+.phpunit.result.cache
+.phpcs-cache

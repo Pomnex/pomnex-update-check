@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<ruleset name="Pomnex Update Check">
+	<description>Coding standards for Pomnex Update Check.</description>
+
+	<file>.</file>
+
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/build/*</exclude-pattern>
+	<exclude-pattern>/languages/*</exclude-pattern>
+	<exclude-pattern>/tests/fixtures/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg name="basepath" value="."/>
+	<arg name="parallel" value="8"/>
+	<arg value="ps"/>
+
+	<!-- PHP and WordPress versions this plugin supports. -->
+	<config name="testVersion" value="7.4-"/>
+	<config name="minimum_wp_version" value="6.2"/>
+
+	<rule ref="WordPress"/>
+	<rule ref="PHPCompatibilityWP"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="pomnex-update-check"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="pomnex_uc"/>
+				<element value="Pomnex\UpdateCheck"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- PHPUnit test classes follow PHPUnit naming, not WordPress file naming. -->
+	<rule ref="WordPress.Files.FileName">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+</ruleset>
