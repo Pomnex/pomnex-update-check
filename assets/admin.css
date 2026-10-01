@@ -1,0 +1,146 @@
+/**
+ * Pomnex Update Check admin styles.
+ *
+ * Loaded on Tools → Update Check only. admin-rtl.css mirrors this file for
+ * right-to-left languages; keep the two in sync.
+ */
+
+.pomnex-uc-tab {
+	margin-top: 16px;
+}
+
+.pomnex-uc-status {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	font-weight: 600;
+	line-height: 1.6;
+	white-space: nowrap;
+}
+
+.pomnex-uc-status--pass {
+	background: #edfaef;
+	border-color: #68de7c;
+	color: #00450c;
+}
+
+.pomnex-uc-status--warning {
+	background: #fcf9e8;
+	border-color: #f2d675;
+	color: #4d3800;
+}
+
+.pomnex-uc-status--fail,
+.pomnex-uc-status--failing_now {
+	background: #fcf0f1;
+	border-color: #f86368;
+	color: #8a2424;
+}
+
+.pomnex-uc-status--could_not_check,
+.pomnex-uc-status--pending {
+	background: #f0f0f1;
+	border-color: #a7aaad;
+	color: #2c3338;
+}
+
+.pomnex-uc-summary .pomnex-uc-status {
+	margin-right: 6px;
+}
+
+.pomnex-uc-pages td {
+	vertical-align: top;
+}
+
+.pomnex-uc-pages input.regular-text {
+	width: 100%;
+}
+
+.pomnex-uc-hint {
+	max-width: 800px;
+	padding: 4px 12px;
+	border-left: 4px solid #72aee6;
+	background: #fff;
+}
+
+.pomnex-uc-thresholds {
+	margin: 0;
+	max-width: 800px;
+}
+
+.pomnex-uc-results {
+	margin: 12px 0 20px;
+}
+
+.pomnex-uc-results td {
+	vertical-align: top;
+}
+
+.pomnex-uc-url,
+.pomnex-uc-marker {
+	word-break: break-all;
+}
+
+.pomnex-uc-marker {
+	color: #50575e;
+}
+
+.pomnex-uc-findings,
+.pomnex-uc-items {
+	margin: 0;
+}
+
+.pomnex-uc-findings li {
+	margin: 0 0 4px;
+	word-break: break-word;
+}
+
+.pomnex-uc-finding--info {
+	color: #50575e;
+}
+
+.pomnex-uc-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 16px 0 8px;
+}
+
+.pomnex-uc-actions form {
+	margin: 0;
+}
+
+.pomnex-uc-entry.card {
+	max-width: none;
+	margin-bottom: 20px;
+}
+
+.pomnex-uc-clickable {
+	cursor: pointer;
+}
+
+.pomnex-uc-clickable:hover td {
+	background: #f6f7f7;
+}
+
+.pomnex-uc-version {
+	color: #50575e;
+	white-space: nowrap;
+}
+
+.wp-list-table .column-date {
+	width: 18%;
+}
+
+.wp-list-table .column-user {
+	width: 14%;
+}
+
+.wp-list-table .column-result {
+	width: 14%;
+}
+
+.pomnex-uc-credit {
+	font-weight: 600;
+}
